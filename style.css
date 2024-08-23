@@ -1,0 +1,276 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    background: #F3F5FC; 
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #F3F5FC; 
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.logo{
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 81dvh;
+}
+
+.user-input {
+    border: none;
+    background:transparent;
+    outline: none; 
+    color: inherit; 
+    width: 100%;
+    height: 64dvh;
+    resize: none;
+    padding: 1.5rem;
+    font-size: 2rem;
+    color: #17153B;
+    overflow: auto;
+    
+}
+
+.user-input::-webkit-scrollbar{
+width: 15px;
+}
+.user-input::-webkit-scrollbar-track{
+    background: #F3F5FC;
+}
+
+.user-input::-webkit-scrollbar-thumb{
+    background: #17153B;
+    border-radius: 350px;
+
+}
+
+i{
+    font-size: 0.75rem;
+    margin: 5px;
+}
+
+.boton-encriptar, .boton-desencriptar{
+    display: inline-block;
+    width: 328px;
+    height: 67px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.boton-encriptar {
+    background-color: #17153B; 
+    color: white;
+    border: 2px solid white;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.boton-encriptar:hover {
+    background-color: #ffffff;
+    color: #17153B;
+    border: 1px solid #17153B;
+}
+
+.boton-desencriptar, .boton-copiar {
+    background-color: #F3F5FC;
+    color: #17153B;
+    border: 1px solid #17153B;
+    &:hover{
+        background-color: #17153B; 
+        color: white;
+        border: 2px solid white;
+        transition: background-color 0.3s, color 0.3s, border 0.3s;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px; 
+}
+
+.warning {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.output-result{
+    background:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+    height: 85dvh;
+    border-radius: 2rem;
+    text-align: center;
+    margin-bottom: 10rem;
+    width: 100%;
+    max-width: 25rem;
+}
+
+.boton-copiar{
+    width: 328px;
+    height: 67px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 12.5rem;
+}
+
+.result-container{
+    margin: 2rem;
+}
+
+.result-title{
+    margin-bottom: 1rem;
+}
+.texto-b{
+    margin-bottom: 5rem;
+
+}
+.hidden{
+    display: none;
+}
+/* Responsividad */
+
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-input, .warning, .texto_b {
+        max-width: 100%;
+    }
+
+    .boton-encriptar, .boton-desencriptar {
+        flex: 1 1 100%;
+        margin-bottom: 1rem;
+    }
+
+    .boton-copiar {
+        max-width: 100%;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+}
+
+    header {
+        justify-content: center;
+    }
+
+    .boton-encriptar, .boton-desencriptar {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .texto_b {
+        font-size: 1.25rem;
+    }
+
+    .image-result{
+        display: none;
+    }
+
+    .input-section{
+        display: flex;
+        justify-content: center;
+        height: 81dvh;
+    }
+    .container-button-group{
+        display: flex;
+    }
+    .button-group{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .output-result{
+        background:white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        height: auto;
+        margin-bottom: 10rem;
+        max-width: 40rem;
+        width: 100%;
+    }
+    
+    .boton-copiar{
+        width: 328px;
+        height: 67px;
+        padding: 10px 20px;
+        border-radius: 24px;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 0;
+    }
+    
+    .result-container{
+        margin: 2rem;
+    }
+    
+    .result-title{
+        margin-bottom: 1rem;
+        
+    }
+    .texto-b{
+        margin-bottom: 1rem;
+        width: 100%;
+    }   
+    footer {
+        text-align: center;
+        padding-bottom: 10px; 
+    }
+}
