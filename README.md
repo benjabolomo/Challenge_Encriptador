@@ -1,4 +1,4 @@
-# Desafío Encriptador de Texto - Alura
+# Desafío Encriptador de Texto
 
 ¡Bienvenido al proyecto de encriptador de texto desarrollado como parte del desafío de Alura! Este proyecto es una aplicación web sencilla que permite encriptar y desencriptar mensajes utilizando una clave específica, perfecta para intercambiar mensajes secretos.
 
